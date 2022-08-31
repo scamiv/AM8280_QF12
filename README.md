@@ -2,15 +2,15 @@
 Gaining acces to the ACER Aopen QF12 cheapo led beamer, also known as am_8280_sz_qf12 .
 Actual manufacturer seems to be Actions-Microelectronics.Co.,Ltd. 
 
+# tldr
 current status: Serial shell found. root pw found: Actions2020!
-
+```
 VERSION_PROCESSOR = AM8280
 VERSION_VENDOR = Actions-Microelectronics.Co.,Ltd.
 VERSION_PRODUCT = EZ.PROJECTOR
+```
 
-wip.
-tldr.
-
+# wip log
 Analyze pcb:
 > Uart found!
   >with serical console!
@@ -42,18 +42,15 @@ Reply:
 }
 ```
 
-> demangle firmware
-binwalk, gzip, strings
-find pw hash 
-> root:$1$4KIaBBOz$KSUnRF3PF.cNaiBiGTjBc/
-> crack using john 
-SUCCESS: pw found 
+dl& demangle firmware using binwalk, gzip, strings.
+find pw hash, yay, root:$1$4KIaBBOz$KSUnRF3PF.cNaiBiGTjBc/
+crack using john 
+SUCCESS, yay:  
 > Actions2020!
 
 
-usefull infos found via google:
- entry> https://github.com/c3c/miracast
- >>! https://github.com/c3c/miracast/issues/4 didnt quite get me to mohuntable image, but good enugh
- >> confirmed dl adress
+# usefull links found:
+ got me started  https://github.com/c3c/miracast
+ https://github.com/c3c/miracast/issues/4 didnt quite get me to mountable image, but good enugh, confirmed dl adress
 https://github.com/ramikg/actionsfirmware-parser > wiki
 > they tried on simmilar device https://alertzero.tumblr.com/post/611852056863571968/how-easy-it-is-to-hack-an-iot-device 
