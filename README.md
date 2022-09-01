@@ -10,6 +10,16 @@ VERSION_VENDOR = Actions-Microelectronics.Co.,Ltd.
 VERSION_PRODUCT = EZ.PROJECTOR
 ```
 
+#boot into hdmi
+log in as root
+remount root rw
+insert 'disp_source.app -c hdmi1'  into  /etc/init.d/rcS
+```
+mount -o rw,remount / 
+echo "disp_source.app -c hdmi1" >> /etc/init.d/rcS
+reboot
+```
+
 # wip log
 Analyze pcb:
 > Uart found!
