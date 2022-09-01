@@ -21,6 +21,8 @@ mount -o rw,remount /
 echo "disp_source.app -c hdmi1" >> /etc/init.d/rcS
 reboot
 ```
+for slightly faster boot insert the line below 'swf_mfr.app -f main_source.swf -c start &'
+to save even more time you can disable the menu entirly.
 
 # wip log
 Analyze pcb:
