@@ -2,13 +2,19 @@
 Gaining acces to the ACER Aopen QF12 cheapo led beamer, also known as am_8280_sz_qf12 .
 Actual manufacturer seems to be Actions-Microelectronics.Co.,Ltd. 
 
-# tldr
-current status: Serial shell found. root pw found: Actions2020!
-```
-VERSION_PROCESSOR = AM8280
-VERSION_VENDOR = Actions-Microelectronics.Co.,Ltd.
-VERSION_PRODUCT = EZ.PROJECTOR
-```
+current status:
+
+Serial shell found. 
+root pw found: Actions2020!
+
+
+# serial shell
+![location of uart qf12](aopen%20qf12%20uart%20small.jpg)
+
+Connect as shown. 
+115200 baud 
+
+user: root pw: Actions2020!
 
 # boot into hdmi
 log in as root
@@ -57,11 +63,19 @@ Reply:
 ```
 
 dl& demangle firmware using binwalk, gzip, strings.
+
 find pw hash, yay, root:$1$4KIaBBOz$KSUnRF3PF.cNaiBiGTjBc/
+
 crack using john 
+
 SUCCESS, yay:  
 > Actions2020!
 
+```
+VERSION_PROCESSOR = AM8280
+VERSION_VENDOR = Actions-Microelectronics.Co.,Ltd.
+VERSION_PRODUCT = EZ.PROJECTOR
+```
 
 # usefull links found:
  got me started  https://github.com/c3c/miracast
