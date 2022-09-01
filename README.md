@@ -78,7 +78,13 @@ VERSION_PRODUCT = EZ.PROJECTOR
 ```
 
 # usefull links found:
+
  got me started  https://github.com/c3c/miracast
+ 
  https://github.com/c3c/miracast/issues/4 didnt quite get me to mountable image, but good enugh, confirmed dl adress
-https://github.com/ramikg/actionsfirmware-parser > wiki
-> they tried on simmilar device https://alertzero.tumblr.com/post/611852056863571968/how-easy-it-is-to-hack-an-iot-device 
+ 
+https://github.com/ramikg/actionsfirmware-parser  wiki got device list, didnt try the parser itself but is said to work. no need for it atm got img via tty and dd
+
+they tried on simmilar device, interesting how widespread those are https://alertzero.tumblr.com/post/611852056863571968/how-easy-it-is-to-hack-an-iot-device 
+ 
+https://github.com/gipi/teardown/tree/master/MiraScreen another actions micro device some reversing of the update process
