@@ -50,6 +50,12 @@ wifi_display <options>
       remove: removed wifi_display.app in background mode
 ```
 it starts: <APP_Chromecast> <COM_AVAHI> <APP_Airmirror> <APP_Airplay> <APP_DLNA> <APP_EZDisplay> 
+
+Youtube tv also works decently.
+
+This hangs if started before network is up. Dont combine with booot to hdmi.
+
+
 # easy way in
    /mnt/usb/developHelpScript.sh is executed on hotplug.
 
