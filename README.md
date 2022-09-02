@@ -34,10 +34,10 @@ to save even more time you can disable the menu entirly.
 the device sends usage statistics to google analytics
 > https://ssl.google-analytics.com/collect    UA-70708060-1
 
-can be blocked by dns. ( mount rw and edit /etc/resolv.conf)
+can be blocked by dns. ( mount rw, unlink, edit /etc/resolv.conf, writeprotect)
 
 # dlna and youtube
-the device can do it, call wifi_display.app to use, Just add your prefered line to rcS. The app does not background itself.
+the device can do it, call "wifi_display.app -c start &" to use, Just add your prefered line to rcS. The app does not background itself.
 ```
 wifi_display <options>
 <options>
@@ -49,7 +49,7 @@ wifi_display <options>
       background: start all wifi display servier in background but no action for user casting data.
       remove: removed wifi_display.app in background mode
 ```
-If called without params, all services get started.
+it starts: <APP_Chromecast> <COM_AVAHI> <APP_Airmirror> <APP_Airplay> <APP_DLNA> <APP_EZDisplay> 
 
 # wip log
 Analyze pcb:
