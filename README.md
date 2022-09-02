@@ -12,6 +12,9 @@ root pw found: Actions2020!
 
 Can boot straight into hdmi (or any other source)
 
+Youtube Tv and dlna running. All services autostarting. 
+
+Device supports Miracast, Google Home, AirPlay, DLNA, and YouTube TV.
 
 # serial shell
 ![location of uart qf12](aopen%20qf12%20uart%20small.jpg)
@@ -47,7 +50,8 @@ the device sends usage statistics to google analytics
 can be blocked by dns. ( mount rw, unlink, edit /etc/resolv.conf, writeprotect)
 
 # dlna and youtube
-the device can do it, call "wifi_display.app -c start &" to use, Just add your prefered line to rcS. The app does not background itself.
+The device supports more services then normally started, call "wifi_display.app -c start &" to start them all. You can also add that line to /etc/init.d/rcS (or the debug script) to launch them at start.
+
 ```
 wifi_display <options>
 <options>
