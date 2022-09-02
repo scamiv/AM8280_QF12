@@ -50,6 +50,8 @@ wifi_display <options>
       remove: removed wifi_display.app in background mode
 ```
 it starts: <APP_Chromecast> <COM_AVAHI> <APP_Airmirror> <APP_Airplay> <APP_DLNA> <APP_EZDisplay> 
+# easy way in
+   /mnt/usb/developHelpScript.sh is executed on hotplug.
 
 # wip log
 Analyze pcb:
