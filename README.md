@@ -24,7 +24,7 @@ remount root rw
 insert 'disp_source.app -c hdmi1'  into  /etc/init.d/rcS
 ```
 mount -o rw,remount / 
-echo "disp_source.app -c hdmi1" >> /etc/init.d/rcS
+echo "disp_source.app -c hdmi1 &" >> /etc/init.d/rcS
 reboot
 ```
 for slightly faster boot insert the line below 'swf_mfr.app -f main_source.swf -c start &'
