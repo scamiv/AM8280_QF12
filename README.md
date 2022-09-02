@@ -16,6 +16,10 @@ Youtube Tv and dlna running. All services autostarting.
 
 Device supports Miracast, Google Home, AirPlay, DLNA, and YouTube TV.
 
+
+# easy way in
+   /mnt/usb/developHelpScript.sh is executed on usb hotplug. 
+   
 # serial shell
 ![location of uart qf12](aopen%20qf12%20uart%20small.jpg)
 
@@ -29,15 +33,14 @@ use [disp_source.app](disp_source.app.md) to switch to desired source in /etc/in
 
 howto:
 
-log in as root
-
 remount root rw
 
 insert 'disp_source.app -c hdmi1'  into  /etc/init.d/rcS
 ```
 mount -o rw,remount / 
 echo "disp_source.app -c hdmi1 &" >> /etc/init.d/rcS
-reboot
+sync
+mount -o ro,remount / 
 ```
 for slightly faster boot insert the line below 'swf_mfr.app -f main_source.swf -c start &'
 to save even more time you can disable the menu entirly.
@@ -50,7 +53,7 @@ the device sends usage statistics to google analytics
 can be blocked by dns. ( mount rw, unlink, edit /etc/resolv.conf, writeprotect)
 
 # dlna and youtube
-The device supports more services then normally started, call "wifi_display.app -c start &" to start them all. You can also add that line to /etc/init.d/rcS (or the debug script) to launch them at start.
+The device supports more services then normally started, call "wifi_display.app -c start &" to start them all. You can also add that line to /etc/init.d/rcS (or the developHelpScript.sh script) to launch them at start.
 
 ```
 wifi_display <options>
@@ -70,8 +73,7 @@ Youtube tv also works decently. Sadly its a bit crash prone, needs governor.
 This hangs if started before network is up. Dont combine with booot to hdmi.
 
 
-# easy way in
-   /mnt/usb/developHelpScript.sh is executed on hotplug.
+
 
 # wip log
 Analyze pcb:
@@ -127,6 +129,8 @@ VERSION_PRODUCT = EZ.PROJECTOR
  https://github.com/c3c/miracast/issues/4 didnt quite get me to mountable image, but good enugh, confirmed dl adress
  
 https://github.com/ramikg/actionsfirmware-parser  wiki got device list, didnt try the parser itself but is said to work. no need for it atm got img via tty and dd
+
+https://github.com/rampageX/firmware-mod-kit
 
 they tried on simmilar device, interesting how widespread those are https://alertzero.tumblr.com/post/611852056863571968/how-easy-it-is-to-hack-an-iot-device 
  
