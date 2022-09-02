@@ -30,6 +30,27 @@ reboot
 for slightly faster boot insert the line below 'swf_mfr.app -f main_source.swf -c start &'
 to save even more time you can disable the menu entirly.
 
+# adblock needed
+the device sends usage statistics to google analytics
+> https://ssl.google-analytics.com/collect    UA-70708060-1
+
+can be blocked by dns. ( mount rw and edit /etc/resolv.conf)
+
+# dlna and youtube
+the device can do it, call wifi_display.app to use, Just add your prefered line to rcS. The app does not background itself.
+```
+wifi_display <options>
+<options>
+   -q : quit wifi display
+   -l : list status 
+   -c <sub_options>
+      start: start all wifi display services, includes DLNA Miracast AirplayMirror and EZView
+      stop: stop all service
+      background: start all wifi display servier in background but no action for user casting data.
+      remove: removed wifi_display.app in background mode
+```
+If called without params, all services get started.
+
 # wip log
 Analyze pcb:
 > Uart found!
