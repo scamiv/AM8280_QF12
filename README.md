@@ -51,7 +51,7 @@ wifi_display <options>
 ```
 it starts: <APP_Chromecast> <COM_AVAHI> <APP_Airmirror> <APP_Airplay> <APP_DLNA> <APP_EZDisplay> 
 
-Youtube tv also works decently.
+Youtube tv also works decently. Sadly its a bit crash prone, needs governor.
 
 This hangs if started before network is up. Dont combine with booot to hdmi.
 
