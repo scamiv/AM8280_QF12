@@ -47,7 +47,7 @@ to save even more time you can disable the menu entirly.
 
 
 # adblock needed
-the device sends usage statistics to google analytics
+the device sends usage statistics to google analytics (and maybe others)
 > https://ssl.google-analytics.com/collect    UA-70708060-1
 
 can be blocked by dns. ( mount rw, unlink, edit /etc/resolv.conf, writeprotect)
