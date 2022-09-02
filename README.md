@@ -1,11 +1,16 @@
 # AM8280_QF12
-Gaining acces to the ACER Aopen QF12 cheapo led beamer, also known as am_8280_sz_qf12 .
-Actual manufacturer seems to be Actions-Microelectronics.Co.,Ltd. 
+Gaining acces to the ACER Aopen QF12 cheapo led beamer, internally called am_8280_sz_qf12.
+Also known as [EZCastBeam H3](https://www.ezcast.com/product/ezcast/beam/beamh3).
+
+Actual manufacturer is Actions-Microelectronics.Co.,Ltd. also known as iEZcast or just EZcast. 
+
 
 current status:
 
 Serial shell found. 
 root pw found: Actions2020!
+
+Can boot straight into hdmi (or any other source)
 
 
 # serial shell
@@ -29,6 +34,7 @@ reboot
 ```
 for slightly faster boot insert the line below 'swf_mfr.app -f main_source.swf -c start &'
 to save even more time you can disable the menu entirly.
+
 
 # adblock needed
 the device sends usage statistics to google analytics
