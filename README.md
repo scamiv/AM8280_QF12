@@ -22,6 +22,10 @@ Connect as shown.
 user: root pw: Actions2020!
 
 # boot into hdmi
+use [disp_source.app](disp_source.app.md) to switch to desired source in /etc/init.d/rcS
+
+howto:
+
 log in as root
 
 remount root rw
