@@ -2,7 +2,7 @@
 Gaining acces to the ACER Aopen QF12 cheapo led beamer, internally called am_8280_sz_qf12.
 Also known as [EZCastBeam H3](https://www.ezcast.com/product/ezcast/beam/beamh3).
 
-Actual manufacturer is Actions-Microelectronics.Co.,Ltd. also known as iEZcast or just EZcast. 
+Actual manufacturer is [Actions-Microelectronics.Co.,Ltd.](https://www.actions-micro.com/) also known as iEZcast or just EZcast. 
 
 
 current status:
@@ -135,3 +135,5 @@ https://github.com/rampageX/firmware-mod-kit
 they tried on simmilar device, interesting how widespread those are https://alertzero.tumblr.com/post/611852056863571968/how-easy-it-is-to-hack-an-iot-device 
  
 https://github.com/gipi/teardown/tree/master/MiraScreen another actions micro device some reversing of the update process
+
+https://deviwiki.com/wiki/Actions
